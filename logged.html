@@ -43,6 +43,7 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="assets/css/custom.css">
+
 </head>
 
 <body background="assets/img/bg/img1.jpg">
@@ -133,11 +134,11 @@
                           </label>
                         </div>
                         </br>
-                            <input  type="text" value="<City/Region/Hotel/Address>" id="example-search-input" onclick="changeCol(this)" onfocus="this.value = '';" style="color: grey; width: 300px;height: 30px;">
+                            <input  type="text" value="<City/Region/Hotel/Address>" id="" onclick="changeCol(this)" onfocus="this.value = '';" style="color: grey; width: 300px;height: 30px;">
                             </br></br>Start date &nbsp; End date</br>
-                            <input  type="text" value="10.10.17" id="example-search-input"  style="color: black; width: 100px;height: 30px;">
+                            <input  type="text" value="10.10.17"  id="example-search-input2"  style="color: black; width: 100px;height: 30px;">
                             <img style="position: absolute;top: 00px;left: 350px;width: 400px;" src="assets/img/woman.jpg">
-                            <input  type="text" value="11.10.17" id="example-search-input"  style="color: black; width: 100px;height: 30px;">
+                            <input  type="text" value="11.10.17" id="example-search-input1"  style="color: black; width: 100px;height: 30px;">
                             </br><br>
                             <hr color="black" width="790px;">
                             <select name="Hotelketten" size="1" style="color: black; width: 300px;height: 30px;">
@@ -206,6 +207,9 @@
     <script src="assets/js/plugins/style-switcher.js"></script>
     <script src="assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
     <script>
+    var tomm = new Date(new Date().getTime() + 86400000);
+document.getElementById("example-search-input2").value = new Date().toISOString().slice(0,10);
+document.getElementById("example-search-input1").value = tomm.toISOString().slice(0,10);
         jQuery(document).ready(function() {
             App.init();
             App.initCounter();
